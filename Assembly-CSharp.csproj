@@ -60,7 +60,20 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\CapsuleMovement.cs" />
+    <Compile Include="Assets\Scripts\CapsuleRotation.cs" />
+    <Compile Include="Assets\Scripts\CapsuleScaling.cs" />
     <Compile Include="Assets\Scripts\HelloWorld.cs" />
+    <Compile Include="Assets\Scripts\PlayerFPSController.cs" />
+    <Compile Include="Assets\Scripts\PlayerTankController.cs" />
+    <Compile Include="Assets\uScriptProjectFiles\uScripts\_GeneratedCode\CapsuleMovement_U.cs" />
+    <Compile Include="Assets\uScriptProjectFiles\uScripts\_GeneratedCode\CapsuleMovement_U_Component.cs" />
+    <Compile Include="Assets\uScriptProjectFiles\uScripts\_GeneratedCode\CapsuleRotation_U.cs" />
+    <Compile Include="Assets\uScriptProjectFiles\uScripts\_GeneratedCode\CapsuleRotation_U_Component.cs" />
+    <Compile Include="Assets\uScriptProjectFiles\uScripts\_GeneratedCode\CapsuleScaling_U.cs" />
+    <Compile Include="Assets\uScriptProjectFiles\uScripts\_GeneratedCode\CapsuleScaling_U_Component.cs" />
+    <Compile Include="Assets\uScriptProjectFiles\uScripts\_GeneratedCode\Controller_U.cs" />
+    <Compile Include="Assets\uScriptProjectFiles\uScripts\_GeneratedCode\Controller_U_Component.cs" />
     <Compile Include="Assets\uScriptProjectFiles\uScripts\_GeneratedCode\HelloWorld_U.cs" />
     <Compile Include="Assets\uScriptProjectFiles\uScripts\_GeneratedCode\HelloWorld_U_Component.cs" />
     <Compile Include="Assets\uScriptProjectFiles\uScriptUserTypes.cs" />
