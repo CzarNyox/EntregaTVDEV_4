@@ -13,6 +13,8 @@ public class PlayerFPSController : MonoBehaviour
         //Ocultar y bloquear el cursor
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
+
+        GameObject.Find("Capsule").GetComponent<MeshRenderer>().enabled = false;
     }
 
     void Update()
