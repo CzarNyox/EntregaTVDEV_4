@@ -110,18 +110,6 @@
     <Compile Include="Assets\Plugins\ProCore\ProBuilder\Editor\pb_MissingScriptEditor.cs" />
     <Compile Include="Assets\Plugins\ProCore\ProBuilder\Editor\pb_Preferences.cs" />
     <Compile Include="Assets\Plugins\ProCore\ProBuilder\Editor\pb_ScenePostProcessor.cs" />
-    <Compile Include="Assets\Plugins\uScriptProjectFiles\Editor\uScriptMenuLocation.cs" />
-    <None Include="Assets\Plugins\uScript_PLE\uScriptEditor\Editor\_Templates\uScriptAct_ForEachListAuto.cs.template" />
-    <None Include="Assets\Plugins\uScript_PLE\uScriptEditor\Editor\_Templates\uScriptAct_IsInList.cs.template" />
-    <None Include="Assets\Plugins\uScript_PLE\uScriptEditor\Editor\_Templates\uScriptAct_ReplaceValueInList.cs.template" />
-    <None Include="Assets\Plugins\uScript_PLE\uScriptEditor\Editor\_Templates\uScriptAct_ModifyList.cs.template" />
-    <None Include="Assets\Plugins\uScript_PLE\uScriptEditor\Editor\_Templates\uScriptAct_SetEnumByString.cs.template" />
-    <None Include="Assets\Plugins\uScript_PLE\uScriptEditor\Editor\_Templates\uScriptAct_AccessList.cs.template" />
-    <None Include="Assets\Plugins\uScript_PLE\uScriptEditor\Editor\_Templates\uScriptAct_ReplaceValueAtIndexInList.cs.template" />
-    <None Include="Assets\Plugins\uScript_PLE\uScriptEditor\Editor\_Templates\uScriptAct_ForEachList.cs.template" />
-    <None Include="Assets\Plugins\uScript_PLE\uScriptEditor\Editor\_Templates\uScriptAct_Set.cs.template" />
-    <None Include="Assets\Plugins\uScript_PLE\uScriptEditor\Editor\_Templates\uScriptUserTypes.cs.template" />
-    <None Include="Assets\Plugins\uScript_PLE\uScriptEditor\Editor\_Templates\uScriptAct_GetListSize.cs.template" />
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>C:/Users/Czar Nyox/Desktop/UnityProjects/TVDEV_4/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
@@ -391,12 +379,6 @@
     </Reference>
     <Reference Include="ProBuilderEditor-Unity5">
       <HintPath>C:/Users/Czar Nyox/Desktop/UnityProjects/TVDEV_4/Assets/Plugins/ProCore/ProBuilder/Editor/ProBuilderEditor-Unity5.dll</HintPath>
-    </Reference>
-    <Reference Include="uScript">
-      <HintPath>C:/Users/Czar Nyox/Desktop/UnityProjects/TVDEV_4/Assets/Plugins/uScript_PLE/uScriptEditor/Editor/uScript.dll</HintPath>
-    </Reference>
-    <Reference Include="uScriptRuntime">
-      <HintPath>C:/Users/Czar Nyox/Desktop/UnityProjects/TVDEV_4/Assets/Plugins/uScript_PLE/uScriptRuntime/uScriptRuntime.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.Advertisements">
       <HintPath>C:/Users/Czar Nyox/Desktop/UnityProjects/TVDEV_4/Library/PackageCache/com.unity.ads@2.0.8/Editor/UnityEditor.Advertisements.dll</HintPath>

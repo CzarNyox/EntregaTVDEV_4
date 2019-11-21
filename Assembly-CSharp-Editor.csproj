@@ -60,7 +60,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\uScriptProjectFiles\Editor\uScriptMenuLocation.cs" />
+    <Compile Include="Assets\Sounds\JMO Assets\Cartoon FX Easy Editor\Editor\CFXEasyEditor.cs" />
+    <Compile Include="Assets\Sounds\JMO Assets\WarFX\Editor\CFX_SpawnSystemEditor.cs" />
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>C:/Users/Czar Nyox/Desktop/UnityProjects/TVDEV_4/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
@@ -330,12 +331,6 @@
     </Reference>
     <Reference Include="ProBuilderEditor-Unity5">
       <HintPath>C:/Users/Czar Nyox/Desktop/UnityProjects/TVDEV_4/Assets/Plugins/ProCore/ProBuilder/Editor/ProBuilderEditor-Unity5.dll</HintPath>
-    </Reference>
-    <Reference Include="uScript">
-      <HintPath>C:/Users/Czar Nyox/Desktop/UnityProjects/TVDEV_4/Assets/Plugins/uScript_PLE/uScriptEditor/Editor/uScript.dll</HintPath>
-    </Reference>
-    <Reference Include="uScriptRuntime">
-      <HintPath>C:/Users/Czar Nyox/Desktop/UnityProjects/TVDEV_4/Assets/Plugins/uScript_PLE/uScriptRuntime/uScriptRuntime.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.Advertisements">
       <HintPath>C:/Users/Czar Nyox/Desktop/UnityProjects/TVDEV_4/Library/PackageCache/com.unity.ads@2.0.8/Editor/UnityEditor.Advertisements.dll</HintPath>
