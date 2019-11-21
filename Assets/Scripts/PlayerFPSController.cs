@@ -1,41 +1,87 @@
 ﻿using UnityEngine;
 
+[System.Serializable]
+[RequireComponent(typeof(CharacterMovement))]
+[RequireComponent(typeof(MouseLook))]
 public class PlayerFPSController : MonoBehaviour
 {
 
-    public GameObject camerasParent;
-    public float walkSpeed = 5f;
-    public float hRotationSpeed = 100F;
-    public float vRotationSpeed = 80f;
+    private CharacterMovement characterMovement;
+    private MouseLook mouseLook;
+    private GunAiming gunAiming;
+    private FireWeapon fireWeapon;
 
     void Start()
     {
-        //Ocultar y bloquear el cursor
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
 
         GameObject.Find("Capsule").GetComponent<MeshRenderer>().enabled = false;
+
+        characterMovement = GetComponent<CharacterMovement>();
+        mouseLook = GetComponent<MouseLook>();
+        gunAiming = GetComponentInChildren<GunAiming>();
+
+        fireWeapon = GetComponentInChildren<FireWeapon>();
     }
 
     void Update()
     {
         movement();
+        rotation();
+        aiming();
+        shooting();
     }
 
     private void movement()
     {
-        //Transform
-        float hMovement = Input.GetAxisRaw("Horizontal");
-        float vMovement = Input.GetAxisRaw("Vertical");
+        //Movement (Transform)
+        float hMovementInput = Input.GetAxisRaw("Horizontal");
+        float vMovementInput = Input.GetAxisRaw("Vertical");
 
-        Vector3 movementDirection = hMovement * Vector3.right + vMovement * Vector3.forward;
-        transform.Translate(movementDirection * (walkSpeed * Time.deltaTime));
+        bool jumpInput = Input.GetButtonDown("Jump");
+        bool dashInput = Input.GetButton("Dash");
 
-        //Rotation
-        float vCamRotation = Input.GetAxis("Mouse Y") * vRotationSpeed * Time.deltaTime;
-        float hPlayerRotation = Input.GetAxis("Mouse X") * hRotationSpeed * Time.deltaTime;
+        characterMovement.moveCharacter(hMovementInput, vMovementInput, jumpInput, dashInput);
+    }
 
-        transform.Rotate(0f, hPlayerRotation, 0f);
-        camerasParent.transform.Rotate(-vCamRotation, 0f, 0f);
+    private void rotation()
+    {
+        float hRotationInput = Input.GetAxis("Mouse X");
+        float vRotationInput = Input.GetAxis("Mouse Y");
+
+        mouseLook.handleRotation(hRotationInput, vRotationInput);
+    }
+
+    private void aiming()
+    {
+        if (Input.GetButtonDown("Fire2"))
+        {
+            gunAiming.OnButtonDown();
+        }else if (Input.GetButtonUp("Fire2"))
+        {
+            gunAiming.OnButtonUp();
+        }
+    }
+
+    private void shooting()
+    {
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            fireWeapon.OnReloadButtonDown();
+        }
+        else
+        {
+            switch (fireWeapon.gunData.firetype)
+            {
+                case FIRETYPE.REPEATER:
+                case FIRETYPE.SEMIAUTOMATIC:
+                    fireWeapon.shoot(Input.GetButtonDown("Fire1"));
+                    break;
+                case FIRETYPE.AUTOMATIC:
+                    fireWeapon.shoot(Input.GetButton("Fire1"));
+                    break;
+            }
+        }
     }
 }
